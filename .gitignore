@@ -1,0 +1,4 @@
+# Sensitive files - DO NOT commit
+certs/
+config.json
+subscribe.yaml

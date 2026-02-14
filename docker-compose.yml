@@ -1,0 +1,19 @@
+services:
+  tuic:
+    image: native/tuic
+    build: .
+    container_name: tuic-server
+    restart: always
+    network_mode: host
+    volumes:
+      - ./config.json:/etc/tuic/config.json
+      - ./certs:/etc/tuic/certs
+
+  nginx:
+    image: nginx:alpine
+    container_name: tuic-config-server
+    restart: always
+    ports:
+      - "8080:80"
+    volumes:
+      - ./subscribe.yaml:/usr/share/nginx/html/subscribe.yaml
