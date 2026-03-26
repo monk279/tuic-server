@@ -9,10 +9,10 @@
     "alpn": ["h3", "spdy/3.1"],
     "zero_rtt_handshake": false,
     "dual_stack": true,
-    "auth_timeout": "3s",
-    "task_negotiation_timeout": "3s",
-    "max_idle_time": "10s",
-    "max_external_packet_size": 1500,
+    "auth_timeout": "10s",
+    "task_negotiation_timeout": "10s",
+    "max_idle_time": "30s",
+    "max_external_packet_size": 1400,
     "gc_interval": "3s",
     "log_level": "info"
 }
