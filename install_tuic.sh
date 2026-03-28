@@ -52,12 +52,12 @@ cat > config.json <<EOF
     "private_key": "/etc/tuic/certs/privkey.pem",
     "congestion_control": "bbr",
     "alpn": ["h3", "spdy/3.1"],
-    "zero_rtt_handshake": false,
+    "zero_rtt_handshake": true,
     "dual_stack": true,
     "auth_timeout": "10s",
     "task_negotiation_timeout": "10s",
-    "max_idle_time": "30s",
-    "max_external_packet_size": 1500,
+    "max_idle_time": "120s",
+    "max_external_packet_size": 1400,
     "gc_interval": "3s",
     "log_level": "info"
 }
