@@ -57,7 +57,7 @@ cat > config.json <<EOF
     "auth_timeout": "10s",
     "task_negotiation_timeout": "10s",
     "max_idle_time": "30s",
-    "max_external_packet_size": 1400,
+    "max_external_packet_size": 1500,
     "gc_interval": "3s",
     "log_level": "info"
 }

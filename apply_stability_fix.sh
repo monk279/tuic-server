@@ -27,7 +27,6 @@ if [ -f "$CONFIG_FILE" ]; then
     sed -i 's/"auth_timeout": "[^"]*"/"auth_timeout": "10s"/' "$CONFIG_FILE"
     sed -i 's/"task_negotiation_timeout": "[^"]*"/"task_negotiation_timeout": "10s"/' "$CONFIG_FILE"
     sed -i 's/"max_idle_time": "[^"]*"/"max_idle_time": "30s"/' "$CONFIG_FILE"
-    sed -i 's/"max_external_packet_size": [0-9]*/"max_external_packet_size": 1400/' "$CONFIG_FILE"
     
     echo ">>> Restarting TUIC Server..."
     cd /root/tuic-server && docker-compose restart tuic > /dev/null 2>&1 || docker restart tuic-server
