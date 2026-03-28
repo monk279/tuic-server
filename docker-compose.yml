@@ -8,6 +8,11 @@ services:
     volumes:
       - ./config.json:/etc/tuic/config.json
       - ./certs:/etc/tuic/certs
+    logging:
+      driver: json-file
+      options:
+        max-size: "10m"
+        max-file: "3"
 
   nginx:
     image: nginx:alpine
@@ -17,3 +22,8 @@ services:
       - "8080:80"
     volumes:
       - ./subscribe.yaml:/usr/share/nginx/html/subscribe.yaml
+    logging:
+      driver: json-file
+      options:
+        max-size: "5m"
+        max-file: "2"
